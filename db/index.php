@@ -8,7 +8,7 @@
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
 
-    <title>PHP CRUD using jquery ajax without page reload</title>
+    <title>Base student tables</title>
 
     <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/css/alertify.min.css"/>
 </head>
@@ -154,16 +154,14 @@
                             </tr>
                         </thead>
                         <tbody>
-                            <?php
-                            require 'dbcon.php';
 
-                            $query = "SELECT * FROM students";
-                            $query_run = mysqli_query($con, $query);
+                        <?php
+                                require 'config/db.php';
 
-                            if(mysqli_num_rows($query_run) > 0)
-                            {
-                                foreach($query_run as $student)
-                                {
+                                $query = "SELECT * FROM students";
+                                $stmt = $con->query($query);
+
+                                while ($student = $stmt->fetch(PDO::FETCH_ASSOC)) {
                                     ?>
                                     <tr>
                                         <td><?= $student['id'] ?></td>
@@ -179,7 +177,6 @@
                                     </tr>
                                     <?php
                                 }
-                            }
                             ?>
                             
                         </tbody>
