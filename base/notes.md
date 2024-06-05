@@ -1,0 +1,1 @@
+https://www.fundaofwebit.com/post/php-ajax-crud-operations-without-page-reload-using-jQuery-Ajax-mySQL
