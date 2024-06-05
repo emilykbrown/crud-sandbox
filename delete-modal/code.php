@@ -56,9 +56,9 @@ if (isset($_POST['update_student'])) {
 if (isset($_POST['delete_student'])) {
     $student_id = $_POST['student_id'];
 
-    $query = "DELETE FROM students WHERE id = :id";
+    $query = "DELETE FROM students WHERE id = :student_id";
     $stmt = $con->prepare($query);
-    $stmt->execute([':id' => $student_id]);
+    $stmt->execute([':student_id' => $student_id]);
 
     if ($stmt) {
         echo json_encode(['status' => 200, 'message' => 'Student Deleted Successfully']);
