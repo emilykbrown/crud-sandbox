@@ -191,8 +191,8 @@
                                         <td><?= $student['phone'] ?></td>
                                         <td><?= $student['course'] ?></td>
                                         <td>
-                                            <button type="button" value="<?=$student['id'];?>" class="viewStudentBtn btn btn-info btn-sm">View</button>
-                                            <button type="button" value="<?=$student['id'];?>" class="editStudentBtn btn btn-success btn-sm">Edit</button>
+                                            <button type="button" value="<?=$student['id'];?>" class="viewStudentBtn btn btn-info btn-sm" data-bs-toggle="modal" data-bs-target="#studentViewModal">View</button>
+                                            <button type="button" value="<?=$student['id'];?>" class="editStudentBtn btn btn-success btn-sm" data-bs-toggle="modal" data-bs-target="#studentEditModal">Edit</button>
                                             <button type="button" value="<?=$student['id'];?>" class="deleteStudentBtn btn btn-danger btn-sm" data-bs-toggle="modal" data-bs-target="#deleteConfirmationModal">Delete</button>
 
                                         </td>

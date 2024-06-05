@@ -1,9 +1,10 @@
 [x] Config/db
-[] Delete modal
-[] Datatables
-[] Vaild checks
-[] View/edit toggle
+[x] Delete modal
+[x] View/edit toggle
 [] Delete multiple
 [] Download csv
+
+[] Datatables
+[] Vaild checks
 [] Toastify js
 [] UUID
